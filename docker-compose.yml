@@ -1,0 +1,8 @@
+unbound:
+ image: wagonza/unbound
+ environment:
+  - UNBOUND_ACCESS_CONTROL="192.168.0.0/24,10.0.0.0/24"
+ ports:
+  - "53:53/udp"
+  - "53:53/tcp"
+ restart: always
